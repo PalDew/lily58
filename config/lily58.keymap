@@ -32,11 +32,11 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            flavor = "hold-preferred";
-            hold-while-undecided;
+            tapping-term-ms = <300>;
+            flavor = "balanced";
             hold-trigger-key-positions = <6 10 11 18 19 20 21 22 23 30 31 32 33 34 35 43 44 45 46 47 48 49 54 55 56 57 7 8 9>;
             hold-trigger-on-release;
+            retro-tap;
         };
 
         hrm_right: hrm_right {
@@ -45,11 +45,11 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            flavor = "hold-preferred";
-            hold-while-undecided;
+            tapping-term-ms = <300>;
+            flavor = "balanced";
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53>;
             hold-trigger-on-release;
+            retro-tap;
         };
     };
 
@@ -62,11 +62,11 @@
 
         layer_0 {
             bindings = <
-&kp GRAVE      &kp N1            &kp N2            &kp N3             &kp N4             &kp N5                                &kp N6       &kp N7              &kp N8              &kp N9             &kp N0                &kp DELETE
-&kp TAB        &kp Q             &kp W             &kp E              &kp R              &kp T                                 &kp Y        &kp U               &kp I               &kp O              &kp P                 &kp BSLH
-&mt LCTRL ESC  &hrm_left LALT A  &hrm_left LGUI S  &hrm_left LCTRL D  &hrm_left LSHFT F  &kp G                                 &kp H        &hrm_right RSHFT J  &hrm_right RCTRL K  &hrm_right RGUI L  &hrm_right RALT SEMI  &kp SQT
-&kp LSHFT      &kp Z             &kp X             &kp C              &kp V              &kp B       &kp LBKT       &kp RBKT   &kp N        &kp M               &kp COMMA           &kp DOT            &kp FSLH              &kp RSHFT
-                                                   &kp LGUI           &kp LALT           &lt 1 BSPC  &key_repeat    &lt 2 RET  &lt 1 SPACE  &kp RALT            &kp RCTRL
+&kp GRAVE      &kp N1                &kp N2                &kp N3             &kp N4             &kp N5                                &kp N6       &kp N7              &kp N8              &kp N9             &kp N0                &kp DELETE
+&kp TAB        &kp Q                 &kp W                 &kp E              &kp R              &kp T                                 &kp Y        &kp U               &kp I               &kp O              &kp P                 &kp BSLH
+&mt LCTRL ESC  &hrm_left LEFT_ALT A  &hrm_left LEFT_GUI S  &hrm_left LCTRL D  &hrm_left LSHFT F  &kp G                                 &kp H        &hrm_right RSHFT J  &hrm_right RCTRL K  &hrm_right RGUI L  &hrm_right RALT SEMI  &kp SQT
+&kp LSHFT      &kp Z                 &kp X                 &kp C              &kp V              &kp B       &kp LBKT       &kp RBKT   &kp N        &kp M               &kp COMMA           &kp DOT            &kp FSLH              &kp RSHFT
+                                                           &kp LGUI           &kp LALT           &lt 1 BSPC  &key_repeat    &lt 2 RET  &lt 1 SPACE  &kp RALT            &kp RCTRL
             >;
         };
 
