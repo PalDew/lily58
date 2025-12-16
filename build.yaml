@@ -1,4 +1,14 @@
 name: Build ZMK firmware
+include:
+  - board: nice_nano
+    shield: lily58_left
+    snippet: studio-rpc-usb-uart
+    artifact-name: lily58_left
+
+  - board: nice_nano
+    shield: lily58_right
+    snippet: studio-rpc-usb-uart
+    artifact-name: lily58_right
 
 on:
   push:
