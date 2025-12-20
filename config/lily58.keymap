@@ -76,11 +76,11 @@
 
         layer_1 {
             bindings = <
-&kp F11     &kp F1            &kp F2    &kp F3    &kp F4     &kp F5                       &kp F6    &kp F7     &kp F8     &kp F9     &kp F10   &kp F12
-&caps_word  &kp F1            &kp LBKT  &kp RBKT  &kp EQUAL  &kp PLUS                     &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp INS   &kp DEL
-&trans      &kp EXCL          &kp LPAR  &kp RPAR  &kp MINUS  &kp UNDER                    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp SQT   &kp TILDE
-&trans      &ext_power EP_ON  &kp LBRC  &kp RBRC  &kp LT     &kp GT     &trans    &trans  &trans    &kp MINUS  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE
-                                        &trans    &trans     &trans     &trans    &trans  &trans    &trans     &trans
+&kp F11       &kp F1            &kp F2    &kp F3    &kp F4     &kp F5                       &kp F6    &kp F7     &kp F8     &kp F9     &kp F10   &kp F12
+&caps_word    &kp F1            &kp LBKT  &kp RBKT  &kp EQUAL  &kp PLUS                     &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp INS   &kp DEL
+&kp CAPSLOCK  &kp EXCL          &kp LPAR  &kp RPAR  &kp MINUS  &kp UNDER                    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp SQT   &kp TILDE
+&trans        &ext_power EP_ON  &kp LBRC  &kp RBRC  &kp LT     &kp GT     &trans    &trans  &trans    &kp MINUS  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE
+                                          &trans    &trans     &trans     &trans    &trans  &trans    &trans     &trans
             >;
         };
 
