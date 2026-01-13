@@ -54,6 +54,7 @@
             retro-tap;
             hold-while-undecided;
             hold-while-undecided-linger;
+            hold-trigger-on-release;
         };
 
         hrm_right: hrm_right {
@@ -68,6 +69,7 @@
             retro-tap;
             hold-while-undecided-linger;
             hold-while-undecided;
+            hold-trigger-on-release;
         };
     };
 
