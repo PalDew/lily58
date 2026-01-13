@@ -67,6 +67,7 @@
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53>;
             retro-tap;
             hold-while-undecided-linger;
+            hold-while-undecided;
         };
     };
 
