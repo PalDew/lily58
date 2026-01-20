@@ -53,6 +53,8 @@
             hold-trigger-key-positions = <6 10 11 18 19 20 21 22 23 30 31 32 33 34 35 43 44 45 46 47 48 49 54 55 56 57 7 8 9>;
             retro-tap;
             hold-trigger-on-release;
+            hold-while-undecided;
+            hold-while-undecided-linger;
         };
 
         hrm_right: hrm_right {
@@ -66,6 +68,8 @@
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53>;
             retro-tap;
             hold-trigger-on-release;
+            hold-while-undecided;
+            hold-while-undecided-linger;
         };
     };
 
@@ -108,11 +112,11 @@
 
         nav {
             bindings = <
-&kp F11     &kp F1      &kp F2    &kp F3    &kp F4     &kp F5                       &kp F6    &kp F7     &kp F8     &kp F9     &kp F10   &kp F12
-&caps_word  &kp PERIOD  &kp LBKT  &kp RBKT  &kp EQUAL  &kp PLUS                     &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp INS   &kp DEL
-&kp CAPS    &kp EXCL    &kp LPAR  &kp RPAR  &kp MINUS  &kp UNDER                    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp SQT   &kp TILDE
-&trans      &trans      &kp LBRC  &kp RBRC  &kp LT     &kp GT     &trans    &trans  &trans    &kp MINUS  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE
-                                  &trans    &trans     &trans     &trans    &trans  &trans    &trans     &trans
+&kp F11     &kp F1      &kp F2    &kp F3    &kp F4     &kp F5                       &kp F6     &kp F7     &kp F8     &kp F9     &kp F10   &kp F12
+&caps_word  &kp PERIOD  &kp LBKT  &kp RBKT  &kp EQUAL  &kp PLUS                     &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp INS   &kp DEL
+&kp CAPS    &kp EXCL    &kp LPAR  &kp RPAR  &kp MINUS  &kp UNDER                    &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp SQT   &kp TILDE
+&trans      &trans      &kp LBRC  &kp RBRC  &kp LT     &kp GT     &trans    &trans  &trans     &kp MINUS  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE
+                                  &trans    &trans     &trans     &trans    &trans  &kp SPACE  &trans     &trans
             >;
         };
 
