@@ -23,24 +23,28 @@
             key-positions = <36 49>;
         };
 
-        base_lay {
-            bindings = <&to 0>;
+        lsft {
+            bindings = <&sk LSHFT>;
             key-positions = <28 31>;
+            slow-release;
         };
 
         lctrl {
             bindings = <&sk LEFT_CONTROL>;
             key-positions = <27 32>;
+            slow-release;
         };
 
         lgui {
             bindings = <&sk LGUI>;
             key-positions = <26 33>;
+            slow-release;
         };
 
         lalt {
             bindings = <&sk LEFT_ALT>;
             key-positions = <25 34>;
+            slow-release;
         };
     };
 };
