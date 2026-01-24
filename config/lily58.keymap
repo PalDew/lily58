@@ -23,54 +23,29 @@
             key-positions = <36 49>;
         };
 
-        base {
+        base_lay {
             bindings = <&to 0>;
-            key-positions = <53 54>;
+            key-positions = <28 31>;
         };
 
-        nohrm {
-            bindings = <&to 1>;
-            key-positions = <52 55>;
+        lctrl {
+            bindings = <&sk LEFT_CONTROL>;
+            key-positions = <27 32>;
         };
 
-        colemak {
-            bindings = <&to 2>;
-            key-positions = <42 43>;
+        lgui {
+            bindings = <&sk LGUI>;
+            key-positions = <26 33>;
+        };
+
+        lalt {
+            bindings = <&sk LEFT_ALT>;
+            key-positions = <25 34>;
         };
     };
 };
 
 / {
-    behaviors {
-        hrm_left: hrm_left {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HRM_LEFT";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <280>;
-            flavor = "tap-preferred";
-            hold-trigger-key-positions = <18 19 20 21 22 23 30 31 32 33 34 35 44 45 46 47 48 49 6 7 8 9 10 11>;
-            retro-tap;
-            quick-tap-ms = <175>;
-            hold-trigger-on-release;
-        };
-
-        hrm_right: hrm_right {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HRM_RIGHT";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <280>;
-            flavor = "tap-preferred";
-            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 0 1 2 3 4 5 14 15 16>;
-            retro-tap;
-            quick-tap-ms = <175>;
-            hold-trigger-on-release;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -80,31 +55,11 @@
 
         base {
             bindings = <
-&kp GRAVE      &kp N1                &kp N2                &kp N3             &kp N4             &kp N5                                 &kp N6       &kp N7                    &kp N8                      &kp N9                  &kp N0                          &kp LC(BACKSPACE)
-&kp TAB        &kp Q                 &kp W                 &kp E              &kp R              &kp T                                  &kp Y        &kp U                     &kp I                       &kp O                   &kp P                           &kp BSLH
-&mt LCTRL ESC  &hrm_left LEFT_ALT A  &hrm_left LEFT_GUI S  &hrm_left RCTRL D  &hrm_left LSHFT F  &kp G                                  &kp H        &hrm_right RIGHT_SHIFT J  &hrm_right RIGHT_CONTROL K  &hrm_right RIGHT_GUI L  &hrm_right RIGHT_ALT SEMICOLON  &kp SQT
-&kp LSHFT      &kp Z                 &kp X                 &kp C              &kp V              &kp B       &kp LEFT_WIN    &kp RGUI   &kp N        &kp M                     &kp COMMA                   &kp DOT                 &kp FSLH                        &kp RSHFT
-                                                           &kp LALT           &kp LCTRL          &lt 3 BSPC  &lt 4 DELETE    &lt 4 RET  &lt 3 SPACE  &kp RCTRL                 &kp RALT
-            >;
-        };
-
-        nohrm {
-            bindings = <
 &kp GRAVE      &kp N1  &kp N2  &kp N3    &kp N4     &kp N5                                 &kp N6       &kp N7     &kp N8     &kp N9   &kp N0    &kp LC(BACKSPACE)
 &kp TAB        &kp Q   &kp W   &kp E     &kp R      &kp T                                  &kp Y        &kp U      &kp I      &kp O    &kp P     &kp BSLH
 &mt LCTRL ESC  &kp A   &kp S   &kp D     &kp F      &kp G                                  &kp H        &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LSHFT      &kp Z   &kp X   &kp C     &kp V      &kp B       &kp LEFT_WIN    &kp RGUI   &kp N        &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                               &kp LALT  &kp LCTRL  &lt 3 BSPC  &lt 4 DELETE    &lt 4 RET  &lt 3 SPACE  &kp RCTRL  &kp RALT
-            >;
-        };
-
-        colemak {
-            bindings = <
-&kp GRAVE      &kp N1                &kp N2                &kp N3                    &kp N4             &kp N5                                 &kp N6       &kp N7                    &kp N8                      &kp N9                  &kp N0                  &kp LC(BACKSPACE)
-&kp TAB        &kp Q                 &kp W                 &kp F                     &kp P              &kp B                                  &kp J        &kp L                     &kp U                       &kp Y                   &kp SEMI                &kp BSLH
-&mt LCTRL ESC  &hrm_left LEFT_ALT A  &hrm_left LEFT_GUI R  &hrm_left LEFT_CONTROL S  &hrm_left LSHFT T  &kp G                                  &kp M        &hrm_right RIGHT_SHIFT N  &hrm_right RIGHT_CONTROL E  &hrm_right RIGHT_GUI I  &hrm_right RIGHT_ALT O  &kp SQT
-&kp LSHFT      &kp Z                 &kp X                 &kp C                     &kp D              &kp V       &kp LEFT_WIN    &kp RGUI   &kp K        &kp H                     &kp COMMA                   &kp DOT                 &kp FSLH                &kp RSHFT
-                                                           &kp LALT                  &kp LCTRL          &lt 3 BSPC  &lt 4 DELETE    &lt 4 RET  &lt 3 SPACE  &kp RCTRL                 &kp RALT
+                               &kp LALT  &kp LCTRL  &lt 1 BSPC  &lt 2 DELETE    &lt 2 RET  &lt 1 SPACE  &kp RCTRL  &kp RALT
             >;
         };
 
