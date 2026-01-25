@@ -51,53 +51,27 @@
 
 / {
     behaviors {
-        brmr: brmr {
+        hrml: hrml {
             compatible = "zmk,behavior-hold-tap";
-            label = "BRMR";
+            label = "HRML";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            flavor = "balanced";
-            hold-while-undecided;
-            hold-trigger-on-release;
-            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53>;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 44 45 46 47 48 49 55 56 57 43 54>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <160>;
+            quick-tap-ms = <150>;
         };
 
-        brml: brml {
+        hrmr: hrmr {
             compatible = "zmk,behavior-hold-tap";
-            label = "BRML";
+            label = "HRMR";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            flavor = "balanced";
-            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 43 44 45 46 47 48 49 54 55 56 57>;
-            hold-while-undecided;
-            hold-trigger-on-release;
-        };
-
-        brmlctl: brmlctl {
-            compatible = "zmk,behavior-hold-tap";
-            label = "BRMLCTL";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            flavor = "balanced";
-            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 43 44 45 46 47 48 49 54 55 56 57>;
-            hold-while-undecided;
-        };
-
-        brmrctl: brmrctl {
-            compatible = "zmk,behavior-hold-tap";
-            label = "BRMRCTL";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            flavor = "balanced";
-            hold-while-undecided;
+            flavor = "tap-preferred";
+            tapping-term-ms = <160>;
+            quick-tap-ms = <150>;
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53>;
         };
     };
@@ -111,11 +85,11 @@
 
         base {
             bindings = <
-&kp GRAVE      &kp N1            &kp N2        &kp N3        &kp N4         &kp N5                                 &kp N6       &kp N7         &kp N8                 &kp N9             &kp N0                &kp LC(BACKSPACE)
-&kp TAB        &kp Q             &kp W         &kp E         &kp R          &kp T                                  &kp Y        &kp U          &kp I                  &kp O              &kp P                 &kp BSLH
-&mt LCTRL ESC  &kp A             &kp S         &kp D         &brml RSHFT F  &kp G                                  &kp H        &brmr RSHFT J  &kp K                  &kp L              &kp SEMI              &kp SQT
-&kp LSHFT      &brmlctl LCTRL Z  &brml LWIN X  &brml LALT C  &kp V          &kp B       &kp LEFT_WIN    &kp RGUI   &kp N        &kp M          &brmr RIGHT_ALT COMMA  &brmr RWIN PERIOD  &brmrctl RCTRL SLASH  &kp RSHFT
-                                               &kp LALT      &kp LCTRL      &lt 1 BSPC  &lt 2 DELETE    &lt 2 RET  &lt 1 SPACE  &kp RCTRL      &kp RALT
+&kp GRAVE      &kp N1            &kp N2        &kp N3         &kp N4         &kp N5                                 &kp N6       &kp N7         &kp N8         &kp N9             &kp N0                     &kp LC(BACKSPACE)
+&kp TAB        &kp Q             &kp W         &kp E          &kp R          &kp T                                  &kp Y        &kp U          &kp I          &kp O              &kp P                      &kp BSLH
+&mt LCTRL ESC  &hrml LEFT_ALT A  &hrml LWIN S  &hrml LCTRL D  &hrml LSHFT F  &kp G                                  &kp H        &hrmr RSHFT J  &hrmr RCTRL K  &hrmr RIGHT_WIN L  &hrmr RIGHT_ALT SEMICOLON  &kp SQT
+&kp LSHFT      &kp Z             &kp X         &kp C          &kp V          &kp B       &kp LEFT_WIN    &kp RGUI   &kp N        &kp M          &kp COMMA      &kp DOT            &kp FSLH                   &kp RSHFT
+                                               &kp LALT       &kp LCTRL      &lt 1 BSPC  &lt 2 DELETE    &lt 2 RET  &lt 1 SPACE  &kp RCTRL      &kp RALT
             >;
         };
 
