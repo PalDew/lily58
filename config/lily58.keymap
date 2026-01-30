@@ -23,28 +23,14 @@
             key-positions = <36 49>;
         };
 
-        lsft {
-            bindings = <&sk LSHFT>;
-            key-positions = <28 31>;
-            slow-release;
+        colemak {
+            bindings = <&to 1>;
+            key-positions = <42 43>;
         };
 
-        lctrl {
-            bindings = <&sk LEFT_CONTROL>;
-            key-positions = <27 32>;
-            slow-release;
-        };
-
-        lgui {
-            bindings = <&sk LGUI>;
-            key-positions = <26 33>;
-            slow-release;
-        };
-
-        lalt {
-            bindings = <&sk LEFT_ALT>;
-            key-positions = <25 34>;
-            slow-release;
+        qwerty {
+            bindings = <&to 0>;
+            key-positions = <53 54>;
         };
     };
 };
@@ -83,13 +69,23 @@
          * Layer 0: Base
          * ======================= */
 
-        base {
+        qwerty {
             bindings = <
 &kp GRAVE      &kp N1            &kp N2        &kp N3         &kp N4         &kp N5                                 &kp N6       &kp N7         &kp N8         &kp N9             &kp N0                     &kp LC(BACKSPACE)
 &kp TAB        &kp Q             &kp W         &kp E          &kp R          &kp T                                  &kp Y        &kp U          &kp I          &kp O              &kp P                      &kp BSLH
 &mt LCTRL ESC  &hrml LEFT_ALT A  &hrml LWIN S  &hrml LCTRL D  &hrml LSHFT F  &kp G                                  &kp H        &hrmr RSHFT J  &hrmr RCTRL K  &hrmr RIGHT_WIN L  &hrmr RIGHT_ALT SEMICOLON  &kp SQT
 &kp LSHFT      &kp Z             &kp X         &kp C          &kp V          &kp B       &kp LEFT_WIN    &kp RGUI   &kp N        &kp M          &kp COMMA      &kp DOT            &kp FSLH                   &kp RSHFT
-                                               &kp LALT       &kp LCTRL      &lt 1 BSPC  &lt 2 DELETE    &lt 2 RET  &lt 1 SPACE  &kp RCTRL      &kp RALT
+                                               &kp LALT       &kp LCTRL      &lt 2 BSPC  &lt 3 DELETE    &lt 3 RET  &lt 2 SPACE  &kp RCTRL      &kp RALT
+            >;
+        };
+
+        colemak_dh {
+            bindings = <
+&kp GRAVE      &kp N1            &kp N2        &kp N3         &kp N4          &kp N5                                 &kp N6       &kp N7          &kp N8         &kp N9        &kp N0             &kp LC(BACKSPACE)
+&kp TAB        &kp Q             &kp W         &kp F          &kp P           &kp B                                  &kp J        &kp L           &kp U          &kp Y         &kp SEMI           &kp BSLH
+&mt LCTRL ESC  &hrml LEFT_ALT A  &hrml LGUI R  &hrml LCTRL S  &hrml LSHIFT T  &kp G                                  &kp M        &hrmr RSHIFT N  &hrmr RCTRL E  &hrmr RGUI I  &hrmr RIGHT_ALT O  &kp SQT
+&kp LSHFT      &kp Z             &kp X         &kp C          &kp D           &kp V       &kp LEFT_WIN    &kp RGUI   &kp K        &kp H           &kp COMMA      &kp DOT       &kp FSLH           &kp RSHFT
+                                               &kp LALT       &kp LCTRL       &lt 2 BSPC  &lt 3 DELETE    &lt 3 RET  &lt 2 SPACE  &kp RCTRL       &kp RALT
             >;
         };
 
