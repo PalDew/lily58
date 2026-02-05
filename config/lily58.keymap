@@ -32,6 +32,11 @@
             bindings = <&to 0>;
             key-positions = <53 54>;
         };
+
+        mod_osl {
+            bindings = <&sl 4>;
+            key-positions = <27 32>;
+        };
     };
 };
 
