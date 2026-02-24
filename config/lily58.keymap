@@ -23,16 +23,6 @@
             bindings = <&caps_word>;
             key-positions = <36 49>;
         };
-
-        bt_layer {
-            bindings = <&to 3>;
-            key-positions = <42 43>;
-        };
-
-        base {
-            bindings = <&to 0>;
-            key-positions = <53 54>;
-        };
     };
 };
 
@@ -75,7 +65,7 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp GRAVE  &kp N1         &kp N2        &kp N3            &kp N4    &kp N5                                         &kp N6       &kp N7    &kp N8                 &kp N9          &kp N0            &kp LC(BACKSPACE)
+&kp GRAVE  &kp N1         &kp N2        &kp N3            &kp N4    &kp N5                                         &kp N6       &kp N7    &kp N8                 &kp N9          &kp N0            &kp BACKSPACE
 &kp TAB    &kp Q          &kp W         &kp E             &kp R     &kp T                                          &kp Y        &kp U     &kp I                  &kp O           &kp P             &kp BSLH
 &kp ESC    &kp A          &kp S         &kp D             &kp F     &kp G                                          &kp H        &kp J     &kp K                  &kp L           &kp SEMI          &kp SQT
 &kp LSHFT  &brml LCTRL Z  &brml LGUI X  &brml LEFT_ALT C  &kp V     &kp B            &kp LBKT        &kp RBKT      &kp N        &kp M     &brmr RIGHT_ALT COMMA  &brmr RGUI DOT  &brmr RCTRL FSLH  &kp RSHFT
@@ -93,23 +83,13 @@
             >;
         };
 
-        num {
-            bindings = <
-&trans  &trans                &trans       &trans         &trans                 &none                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LEFT_PARENTHESIS  &kp STAR     &kp AMPERSAND  &trans                 &trans                    &trans  &kp N7  &kp N8  &kp N9  &trans  &trans
-&trans  &kp CARET             &kp PERCENT  &kp DOLLAR     &trans                 &trans                    &trans  &kp N4  &kp N5  &kp N6  &trans  &trans
-&trans  &kp HASH              &kp AT       &kp EXCL       &trans                 &trans  &trans    &trans  &trans  &kp N1  &kp N2  &kp N3  &trans  &trans
-                                           &trans         &kp RIGHT_PARENTHESIS  &trans  &trans    &trans  &trans  &kp N0  &trans
-            >;
-        };
-
         only_bt_settings {
             bindings = <
-&trans  &trans  &trans        &trans        &trans          &trans                          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans        &trans        &bt BT_CLR      &out OUT_USB                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0    &trans                          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans        &trans        &bt BT_CLR_ALL  &out OUT_BLE  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                              &trans        &trans          &trans        &trans    &trans  &trans  &trans  &trans
+&trans  &trans  &trans        &trans        &trans          &trans                          &trans                    &trans                    &trans                &trans                   &trans  &trans
+&trans  &trans  &trans        &trans        &bt BT_CLR      &out OUT_USB                    &trans                    &mt EXCLAMATION NUMBER_1  &mt AT_SIGN NUMBER_2  &mt HASH NUMBER_3        &trans  &trans
+&trans  &trans  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0    &trans                          &trans                    &mt DOLLAR NUMBER_4       &mt PERCENT N5        &mt CARET NUMBER_6       &trans  &trans
+&trans  &trans  &trans        &trans        &bt BT_CLR_ALL  &out OUT_BLE  &trans    &trans  &trans                    &mt AMPERSAND N7          &mt ASTERISK N8       &mt LEFT_PARENTHESIS N9  &trans  &trans
+                              &trans        &trans          &trans        &trans    &trans  &mt RIGHT_PARENTHESIS N0  &trans                    &trans
             >;
         };
     };
