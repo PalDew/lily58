@@ -5,6 +5,7 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
@@ -21,6 +22,16 @@
         caps_word {
             bindings = <&caps_word>;
             key-positions = <36 49>;
+        };
+
+        bt_layer {
+            bindings = <&to 3>;
+            key-positions = <42 43>;
+        };
+
+        base {
+            bindings = <&to 0>;
+            key-positions = <53 54>;
         };
     };
 };
@@ -84,11 +95,21 @@
 
         num {
             bindings = <
-&trans  &trans      &trans      &trans      &trans      &out OUT_TOG                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp RS(N9)  &kp LS(N8)  &kp LS(N7)  &trans      &trans                          &trans  &kp N7  &kp N8  &kp N9  &trans  &trans
-&trans  &kp LS(N6)  &kp LS(N5)  &kp LS(N4)  &trans      &trans                          &trans  &kp N4  &kp N5  &kp N6  &trans  &trans
-&trans  &kp LS(N3)  &kp LS(N2)  &kp LS(N1)  &trans      &trans        &trans    &trans  &trans  &kp N1  &kp N2  &kp N3  &trans  &trans
-                                &trans      &kp LS(N0)  &trans        &trans    &trans  &trans  &kp N0  &trans
+&trans  &trans                &trans       &trans         &trans                 &none                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LEFT_PARENTHESIS  &kp STAR     &kp AMPERSAND  &trans                 &trans                    &trans  &kp N7  &kp N8  &kp N9  &trans  &trans
+&trans  &kp CARET             &kp PERCENT  &kp DOLLAR     &trans                 &trans                    &trans  &kp N4  &kp N5  &kp N6  &trans  &trans
+&trans  &kp HASH              &kp AT       &kp EXCL       &trans                 &trans  &trans    &trans  &trans  &kp N1  &kp N2  &kp N3  &trans  &trans
+                                           &trans         &kp RIGHT_PARENTHESIS  &trans  &trans    &trans  &trans  &kp N0  &trans
+            >;
+        };
+
+        only_bt_settings {
+            bindings = <
+&trans  &trans  &trans        &trans        &trans          &trans                          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans        &trans        &bt BT_CLR      &out OUT_USB                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0    &trans                          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans        &trans        &bt BT_CLR_ALL  &out OUT_BLE  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                              &trans        &trans          &trans        &trans    &trans  &trans  &trans  &trans
             >;
         };
     };
